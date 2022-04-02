@@ -1,0 +1,1094 @@
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/jquery-ui.css" />
+		<link rel="stylesheet" href="css/jquery.growl.css" />
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.SuperSlide.2.1.2.js" ></script>
+		<script type="text/javascript" src="js/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/jquery.growl.js" ></script>
+		<!-- <script type="text/javascript" src="js/common.js" ></script> -->
+		<script type="text/javascript" src="js/jquery.imagezoom.min.js" ></script>
+		<script src="js/Index.js" type="text/javascript" charset="utf-8"></script>
+		<title>网站首页</title>
+
+	</head>
+	<body>
+		<header>
+			<div>
+				<div id="top">
+					<div class="inside_pages">
+						<div class="Collection">
+							<a href="login.html" class="green">请登录</a>
+							<a href="regist.html" class="green">免费注册</a>
+						</div>
+					</div>
+					<div class="hd_top_manu clearfix">
+						<ul class="clearfix">
+							<li class="hd_menu_tit" data-addclass="hd_menu_hover">
+								<a href="index.html">首页</a>
+							</li>
+							<li class="hd_menu_tit" data-addclass="hd_menu_hover">
+								<a href="#">我的和币</a>
+							</li>
+							<li class="hd_menu_tit" data-addclass="hd_menu_hover">
+								<a href="#">消息中心</a>
+							</li>
+							<li class="hd_menu_tit" data-addclass="hd_menu_hover">
+								<a href="product_list.html">商品分类</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div id="header" class="header page_style">
+					<!--显示logo-->
+					<div class="logo">
+						<a href="index.html"><img src="img/logo.jpg"/></a>
+					</div>
+					<!--搜索块-->
+					<div class="Search">
+						<div class="search_list">
+							<ul>
+								<li class="current"><a href="#">产品</a></li>
+								<li><a href="#">信息</a></li>
+							</ul>
+						</div>
+						<div class="clear search_cur">
+							<input name="searchName" id="searchName" class="search_box" onkeydown="keyDownSearch()" type="text" />
+							<input type="submit" value="搜 索" class="Search_btn" />
+						</div>
+						<div class="clear hotword">热门搜索词：香醋&nbsp;&nbsp;茶叶&nbsp;&nbsp;草莓&nbsp;&nbsp;葡萄&nbsp;&nbsp;菜油</div>
+					</div>
+					<div class="hd_Shopping_list" id="Shopping_list">
+						<div class="s_cart"><a href="#">我的购物车</a><i class="ci-right">&gt;</i><i class="ci-count" id="shopping-amount">0</i></div>
+						<div class="dropdown-layer">
+							<div class="spacer"></div>
+							<!--
+								<div class="prompt"></div>-->
+								<div class="nogoods"><b></b>购物车中还没有商品，赶紧选购吧！</div>
+	 						<!--<ul class="p_s_list">
+								<li>
+		    						<div class="img"><img src="products/p_12.jpg"></div>
+		    						<div class="content"><p class="name"><a href="#">加多宝凉茶</a></p><p>颜色分类:1 尺码:1</p></div>
+									<div class="Operations">
+										<p class="Price">￥34.90</p>
+										<p><a href="#">删除</a></p>
+									</div>
+  						</li>
+							</ul>	-->	
+	 						<!--<div class="Shopping_style">
+	 							<div class="p-total">共<b>1</b>件商品　共计<strong>￥ 515.00</strong></div>
+  								<a href="Shop_cart.html" title="去购物车结算" id="btn-payforgoods" class="Shopping">去购物车结算</a>
+	 						</div>	
+	 					-->
+						</div>
+					</div>
+				</div>
+				<!--菜单栏-->
+				<div class="Navigation" id="Navigation">
+					<ul class="Navigation_name">
+						<li class="on"><a href="index.html">首页</a></li>
+		            	<li class="hour"><span class="bg_muen"></span><a href="#">半小时生活圈</a></li>
+						<li><a href="#">你身边的超市</a></li>
+						<li><a href="#">预售专区</a><em class="hot_icon"></em></li>
+						<li><a href="#.html">商城</a></li>
+						<li><a href="#">好评商户</a></li>
+						<li><a href="#">热销活动</a></li>
+						<li><a href="#.html">联系我们</a></li>
+				 	</ul>			 
+				</div>
+				<script>$("#Navigation").slide({titCell:".Navigation_name li",trigger:"click"});</script>
+			</div>
+		</header>
+		<!--广告幻灯片样式-->
+		<div id="slideBox" class="slideBox">
+			<div class="hd">
+				<ul class="smallUl">
+					<li class="on">1</li>
+					<li class="">2</li>
+					<li class="">3</li>
+					<li class="">4</li>
+					<li class="">5</li>
+				</ul>
+			</div>
+			<div class="bd">
+				<ul>
+					<li>
+						<a href="#" target="_blank">
+							<div style="background:url(ads/ad-1.jpg) no-repeat; background-position:center; width:100%; height:450px;"></div>
+						</a>
+					</li>
+					<li>
+						<a href="#" target="_blank">
+							<div style="background:url(ads/ad-2.jpg) no-repeat; background-position:center ; width:100%; height:450px;"></div>
+						</a>
+					</li>
+					<li>
+						<a href="#" target="_blank">
+							<div style="background:url(ads/ad-3.jpg) no-repeat rgb(226, 155, 197); background-position:center; width:100%; height:450px;"></div>
+						</a>
+					</li>
+                    <li>
+                    	<a href="#" target="_blank">
+                    		<div style="background:url(ads/ad-4.jpg) no-repeat #f7ddea; background-position:center; width:100%; height:450px;"></div>
+                    	</a>
+                    </li>
+                    <li>
+                    	<a href="#" target="_blank">
+                    		<div style="background:url(ads/ad-5.jpg) no-repeat  #F60; background-position:center; width:100%; height:450px;"></div>
+                    	</a>
+                    </li>
+				</ul>
+			</div>
+			<!--前/后按钮-->
+			<a class="prev" href="javascript:void(0)"></a>
+			<a class="next" href="javascript:void(0)"></a>
+		</div>
+		<!--图片轮播-->
+		<script type="application/javascript">
+			$('.slideBox').slide({mainCell:".bd ul",autoPlay:true});
+		</script>
+		<!--内容-->
+		<div id="mian">
+			<div class="clearfix marginbottom">
+				<!--产品分类-->
+				<div class="Menu_style" id="
+				">
+					<div class="title_name"><em></em>所有商品分类</div>
+					<div class="content hd_allsort_out_box_new">
+						<ul class="Menu_list">
+							<li class="name on">
+								<div class="Menu_name">
+									<a href="product_list.html">酒水类</a> <span>&lt;</span>
+								</div>
+								<div class="link_name">
+									<p>
+										<a href="Product_Detailed.html">白酒</a>
+										<a href="#">葡萄酒</a>
+										<a href="#">洋酒</a>
+										<a href="#">啤酒</a>
+										<a href="Product_Detailed.html">黄酒</a>
+									</p>
+								</div>
+								<div class="menv_Detail">
+									<div class="cat_pannel clearfix">
+										<div class="hd_sort_list">
+											<dl class="clearfix" data-tpc="1">
+												<dt><a href="#">白酒<i>&gt;</i></a></dt>
+												<dd>
+													<a href="#">茅台</a>
+													<a href="#">五粮液</a>
+													<a href="#">洋河</a>
+													<a href="#">牛栏山</a>
+													<a href="#">泸州老窖</a>
+													<a href="#">郎酒</a>
+													<a href="#">剑南春</a>
+													<a href="#">金六福</a>
+													<a href="#">古井贡酒</a>
+													<a href="#">红星</a>
+													<a href="#">国窖</a>
+													<a href="#">赖茅</a>
+													<a href="#">江小白</a>
+													<a href="#">水井坊</a>
+												</dd> 
+											</dl>
+											<dl class="clearfix" data-tpc="2">
+												<dt><a href="#">葡萄酒<i>&gt;</i></a></dt>
+												<dd>
+													<a href="#">中国</a>
+													<a href="#">法国 </a>
+													<a href="#">澳大利亚</a>
+													<a href="#">西班牙</a>
+													<a href="#">美国</a>
+													<a href="#">葡萄牙</a>
+													<a href="#">德国</a>
+													<a href="#">智利</a>
+													<a href="#">加拿大</a>
+													<a href="#">意大利</a>
+												</dd> 
+											</dl>
+											<dl class="clearfix" data-tpc="3">
+												<dt><a href="#">洋酒<i>&gt;</i></a></dt>
+												<dd>
+													<a href="#">白兰地</a>
+													<a href="#">威士忌</a>
+													<a href="#">伏特加</a>
+													<a href="#">朗姆酒</a>
+													<a href="#">力娇酒</a>
+													<a href="#">金酒</a>
+													<a href="#">鸡尾酒</a>
+													<a href="#">龙舌兰</a>
+												</dd> 
+											</dl>
+											<dl class="clearfix" data-tpc="4">
+												<dt><a href="#">啤酒<i>&gt;</i></a></dt>
+												<dd>
+													<a href="#">黑啤</a>
+													<a href="#">比利时</a>
+													<a href="#">百威</a>
+													<a href="#">燕京</a>
+													<a href="#">瓦伦丁</a>
+													<a href="#">喜力</a>
+													<a href="#">爱士堡</a>
+													<a href="#">青岛</a>
+													<a href="#">雪花</a>
+													<a href="#">哈尔滨</a>
+													<a href="#">嘉士伯</a>
+													<a href="#">奥丁格</a>
+													<a href="#">Kaiserdom</a>
+												</dd> 
+											</dl>
+											<dl class="clearfix" data-tpc="4">
+												<dt><a href="#">黄酒<i>&gt;</i></a></dt>
+												<dd>
+													<a href="#">劲牌</a>
+													<a href="#">古越龙山</a>
+													<a href="#">塔牌</a>
+													<a href="#">女儿红</a>
+													<a href="#">石库门</a>
+													<a href="#">宁夏红</a>
+													<a href="#">即墨</a>
+													<a href="#">爽露爽</a>
+													<a href="#">和酒</a>
+													<a href="#">咸亨</a>
+													<a href="#">鉴湖</a>
+													<a href="#">会稽山</a>
+													<a href="#">唐宋</a>
+												</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="name">
+								<div class="Menu_name"><a href="#">食品饮料类</a><span>&lt;</span></div>
+								<div class="link_name">
+									<a href="Product_Detailed.html">食用油</a>
+									<a href="#">米面杂粮</a>
+									<a href="#">调味品</a>
+									<a href="#">南北干货</a>
+								</div>
+								<div class="menv_Detail">
+									<div class="cat_pannel clearfix">
+										<div class="hd_sort_list">
+											<dl class="clearfix" data-tpc="1">
+												<dt><a href="#">食用油<i>&gt;</i></a></dt>
+												<dd>
+													<a href="#">花生油</a>
+													<a href="#">玉米油</a>
+													<a href="#">菜籽油</a>
+													<a href="#">橄榄油</a>
+													<a href="#">葵花籽油</a>
+													<a href="#">大豆油</a>
+													<a href="#">山茶油</a>
+													<a href="#">调和油</a>
+													<a href="#">亚麻籽油</a>
+												</dd> 
+											</dl>
+											<dl class="clearfix" data-tpc="2">
+												<dt><a href="#">米面杂粮<i>&gt;</i></a></dt>
+												<dd>
+													<a href="#">稻花香米</a>
+													<a href="#">长粒香米 </a>
+													<a href="#">小町米</a>
+													<a href="#">油粘米</a>
+													<a href="#">丝苗米</a>
+													<a href="#">茉莉香米</a>
+												</dd> 
+												<dd>
+													<a href="#">通用面粉</a>
+													<a href="#">挂面</a>
+													<a href="#">烘焙面粉</a>
+												</dd> 
+												<dd>
+													<a href="#">黑豆</a>
+													<a href="#">红豆</a>
+													<a href="#">薏米</a>
+													<a href="#">绿豆</a>
+													<a href="#">杂粮粥米</a>
+													<a href="#">杂粮粉</a>
+												</dd> 
+											</dl>
+											<dl class="clearfix" data-tpc="4">
+												<dt><a href="#">调味品<i>&gt;</i></a></dt>
+												<dd>
+													<a href="#">醋</a>
+													<a href="#">酱油</a>
+													<a href="#">蒸鱼豉油</a>
+													<a href="#">料酒</a>
+													<a href="#">耗油</a>
+													<a href="#">鱼露</a>
+													<a href="#">花椒油</a>
+													<a href="#">调汤汁</a>
+												</dd>
+												<dd>
+													<a href="#">盐</a>
+													<a href="#">火锅香锅</a>
+													<a href="#">鸡精/味精</a>
+												</dd>
+												<dd>
+													<a href="#">火锅/香锅料</a>
+													<a href="#">酱菜</a>
+													<a href="#">咖喱酱</a>
+													<a href="#">辣酱</a>
+													<a href="#">香菇酱</a>
+													<a href="#">豆瓣酱</a>
+													<a href="#">花生酱</a>
+												</dd>
+											</dl>
+											<dl class="clearfix" data-tpc="5">
+												<dt><a href="#">南北干货<i>&gt;</i></a></dt>
+												<dd>
+													<a href="#">干贝</a>
+													<a href="#">紫菜</a>
+													<a href="#">海带</a>
+													<a href="#">鱿鱼干</a>
+													<a href="#">木耳</a>
+													<a href="#">枸杞</a>
+													<a href="#">人参</a>
+													<a href="#">燕窝</a>
+													<a href="#">鹿茸</a>
+													<a href="#">桂圆</a>
+													<a href="#">百合</a>
+													<a href="#">莲子</a>
+												</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="name">
+								<div class="Menu_name"><a href="#">生鲜类</a><span>&lt;</span></div>
+								<div class="link_name">
+									<a href="Product_Detailed.html">水果</a>
+									<a href="#">海鲜水产</a>
+									<a href="#">精选肉类</a>
+									<a href="#">蔬菜蛋品</a>
+								</div>
+								<div class="menv_Detail">
+									<div class="cat_pannel clearfix">
+										<div class="hd_sort_list">
+											<dl class="clearfix" data-tpc="1">
+												<dt><a href="#">水果<i>&gt;</i></a></dt>
+												<dd>
+													<a href="#">苹果</a>
+													<a href="#">香蕉</a>
+													<a href="#">梨</a>
+													<a href="#">橙子</a>
+													<a href="#">奇异果</a>
+													<a href="#">猕猴桃</a>
+													<a href="#">火龙果</a>
+													<a href="#">草莓</a>
+													<a href="#">瓜</a>
+													<a href="#">芒果</a>
+													<a href="#">蓝莓</a>
+													<a href="#">柚子</a>
+													<a href="#">牛油果</a>
+													<a href="#">柠檬</a>
+													<a href="#">车厘子</a>
+													<a href="#">樱桃</a>
+													<a href="#">菠萝</a>
+													<a href="#">葡萄</a>
+													<a href="#">提子</a>
+													<a href="#">桔</a>
+													<a href="#">榴莲</a>
+													<a href="#">百香果</a>
+													<a href="#">龙眼</a>
+												</dd> 
+											</dl>
+											<dl class="clearfix" data-tpc="2">
+												<dt><a href="#">海鲜水产<i>&gt;</i></a></dt>
+												<dd>
+													<a href="#">三文鱼</a>
+													<a href="#">鳕鱼 </a>
+													<a href="#">带鱼</a>
+													<a href="#">黄鱼</a>
+													<a href="#">金枪鱼</a>
+													<a href="#">黄花鱼</a>
+													<a href="#">巴沙鱼</a>
+													<a href="#">鲳鱼</a>
+													<a href="#">鲈鱼</a>
+													<a href="#">鳗鱼</a>
+												</dd> 
+												<dd>
+													<a href="#">红虾</a>
+													<a href="#">白虾</a>
+													<a href="#">虾仁</a>
+													<a href="#">北极甜虾</a>
+													<a href="#">大龙虾</a>
+													<a href="#">小龙虾</a>
+													<a href="#">皮皮虾</a>
+													<a href="#">基围虾</a>
+												</dd> 
+											</dl>
+											<dl class="clearfix" data-tpc="4">
+												<dt><a href="#">精选肉类<i>&gt;</i></a></dt>
+												<dd>
+													<a href="#">猪肉</a>
+													<a href="#">牛肉</a>
+													<a href="#">羊肉</a>
+													<a href="#">鸡肉</a>
+													<a href="#">鸭肉</a>
+													<a href="#">蒙古牛羊肉</a>
+													<a href="#">宁夏羊肉</a>
+													<a href="#">冷藏肉</a>
+													<a href="#">有机肉</a>
+													<a href="#">鹅肉</a>
+													<a href="#">鹿肉</a>
+													<a href="#">鸽肉</a>
+												</dd> 
+											</dl>
+											<dl class="clearfix" data-tpc="4">
+												<dt><a href="#">蔬菜蛋品<i>&gt;</i></a></dt>
+												<dd>
+													<a href="#">生菜</a>
+													<a href="#">白菜</a>
+													<a href="#">西蓝花</a>
+													<a href="#">菠菜</a>
+													<a href="#">山药</a>
+													<a href="#">萝卜</a>
+													<a href="#">莲藕</a>
+													<a href="#">香菇</a>
+													<a href="#">松茸</a>
+													<a href="#">玉米</a>
+													<a href="#">黄瓜</a>
+													<a href="#">西红柿</a>
+													<a href="#">鸡蛋</a>
+													<a href="#">鸭蛋</a>
+													<a href="#">松花蛋</a>
+													<a href="#">四季豆</a>
+													<a href="#">豇豆</a>
+													<a href="#">茄子</a>
+													<a href="#">黄瓜</a>
+													<a href="#">芋头</a>
+													<a href="#">土豆</a>
+													<a href="#">鹅蛋</a>
+													<a href="#">鹌鹑蛋</a>
+													<a href="#">咸蛋</a>
+													<a href="#">葱</a>
+													<a href="#">姜</a>
+													<a href="#">蒜</a>
+												</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--产品栏切换-->
+				<div class="product_list left">
+					<div class="slideGroup">
+						<div class="parHd">
+							<ul>
+								<li class="on">新品上市</li>
+								<li>超值特惠</li>
+								<li>本期团购</li>
+								<li>产品精选</li>
+								<li>抢先一步</li>
+							</ul>
+						</div>
+						<div class="parBd">
+							<div class="slideBoxs">
+								<a class="sPrev" href="javascript:void(0)"></a>
+								<div class="tempWrap">
+									<ul>
+										<li>
+											<div class="pic">
+												<a href="#" target="_blank"><img src="products/p_11.jpg"></a>
+											</div>
+											<div class="title">
+												<a href="#" target="_blank" class="name">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
+												<h3><b>￥</b>23.00</h3>
+											</div>
+										</li>
+										<li>
+											<div class="pic">
+												<a href="#" target="_blank"><img src="products/p_12.jpg"></a>
+											</div>
+											<div class="title">
+												<a href="#" target="_blank" class="name">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
+                                				<h3><b>￥</b>23.00</h3>
+                                			</div>
+										</li>
+										<li>
+											<div class="pic">
+												<a href="#" target="_blank"><img src="products/p_13.jpg"></a>
+											</div>
+											<div class="title">
+                                				<a href="#" target="_blank" class="name">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
+                                				<h3><b>￥</b>23.00</h3>
+                                			</div>
+										</li>
+										<li>
+											<div class="pic">
+												<a href="#" target="_blank"><img src="products/p_15.jpg"></a>
+											</div>
+											<div class="title">
+                                				<a href="#" target="_blank" class="name">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
+                                				<h3><b>￥</b>23.00</h3>
+                                			</div>
+										</li>
+									</ul>
+								</div>
+								<a class="sNext" href="javascript:void(0)"></a>
+							</div>
+							<!-- slideBox End -->
+							
+							<div class="slideBoxs">
+								<a class="sPrev" href="javascript:void(0)"></a>
+								<ul>
+									<li>
+										<div class="pic">
+											<a href="#" target="_blank"><img src="products/p_15.jpg" /></a>
+										</div>
+										<div class="title">
+			                                <a href="#" target="_blank" class="name">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
+			                                <h3><b>￥</b>23.00</h3>
+		                                </div>
+									</li>
+									<li>
+										<div class="pic">
+											<a href="#" target="_blank"><img src="products/p_15.jpg" /></a>
+										</div>
+										<div class="title">
+			                                <a href="#" target="_blank" class="name">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
+			                                <h3><b>￥</b>23.00</h3>
+		                                </div>
+									</li>
+									<li>
+										<div class="pic">
+											<a href="#" target="_blank"><img src="products/p_34.jpg" /></a>
+										</div>
+										<div class="title">
+			                                <a href="#" target="_blank" class="name">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
+			                                <h3><b>￥</b>23.00</h3>
+		                                </div>
+									</li>
+									<li>
+										<div class="pic">
+											<a href="#" target="_blank"><img src="products/p_58.jpg" /></a>
+										</div>
+										<div class="title">
+			                                <a href="#" target="_blank" class="name">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
+			                                <h3><b>￥</b>23.00</h3>
+		                                </div>
+									</li>
+								</ul>
+								<a class="sNext" href="javascript:void(0)"></a>
+							</div><!-- slideBox End -->
+							
+							<div class="slideBoxs">
+								<a class="sPrev" href="javascript:void(0)"></a>
+								<ul>
+									<li>
+										<div class="pic">
+											<a href="#" target="_blank"><img src="products/p_57.jpg" /></a>
+										</div>
+										<div class="title">
+                                			<a href="#" target="_blank" class="name">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
+                                			<h3><b>￥</b>23.00</h3>
+                                		</div>
+									</li>
+									<li>
+										<div class="pic">
+											<a href="#" target="_blank"><img src="products/p_56.jpg" /></a>
+										</div>
+										<div class="title">
+                                			<a href="#" target="_blank" class="name">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
+                                			<h3><b>￥</b>23.00</h3>
+                                		</div>
+									</li>
+									<li>
+										<div class="pic">
+											<a href="#" target="_blank"><img src="products/p_54.jpg" /></a>
+										</div>
+										<div class="title">
+                                			<a href="#" target="_blank" class="name">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
+                                			<h3><b>￥</b>23.00</h3>
+                                		</div>
+									</li>
+									<li>
+										<div class="pic">
+											<a href="#" target="_blank"><img src="products/p_55.jpg" /></a>
+										</div>
+										<div class="title">
+                                			<a href="#" target="_blank" class="name">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
+                                			<h3><b>￥</b>23.00</h3>
+                                		</div>
+									</li>
+								</ul>
+								<a class="sNext" href="javascript:void(0)"></a>
+							</div><!-- slideBox End -->
+							
+							<div class="slideBoxs">
+								<a class="sPrev" href="javascript:void(0)"></a>
+								<ul>
+									<li>
+										<div class="pic">
+											<a href="#" target="_blank"><img src="products/p_50.jpg" /></a>
+										</div>
+										<div class="title">
+                                			<a href="#" target="_blank" class="name">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
+                                			<h3><b>￥</b>23.00</h3>
+                                		</div>
+									</li>
+									<li>
+										<div class="pic">
+											<a href="#" target="_blank"><img src="products/p_51.jpg" /></a>
+										</div>
+										<div class="title">
+                                			<a href="#" target="_blank" class="name">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
+                                			<h3><b>￥</b>23.00</h3>
+                                		</div>
+									</li>
+									<li>
+										<div class="pic">
+											<a href="#" target="_blank"><img src="products/p_52.jpg" /></a>
+										</div>
+										<div class="title">
+	                                		<a href="#" target="_blank" class="name">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
+	                                		<h3><b>￥</b>23.00</h3>
+	                                	</div>
+									</li>
+									<li>
+										<div class="pic">
+											<a href="#" target="_blank"><img src="products/p_53.jpg" /></a>
+										</div>
+										<div class="title">
+	                                		<a href="#" target="_blank" class="name">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
+	                                		<h3><b>￥</b>23.00</h3>
+	                                	</div>
+									</li>
+								</ul>
+								<a class="sNext" href="javascript:void(0)"></a>
+							</div><!-- slideBox End -->
+							
+							<div class="slideBoxs">
+								<a class="sPrev" href="javascript:void(0)"></a>
+								<ul>
+									<li>
+										<div class="pic">
+											<a href="#" target="_blank"><img src="products/p_15.jpg" /></a>
+										</div>
+										<div class="title">
+		                                	<a href="#" target="_blank" class="name">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
+		                                	<h3><b>￥</b>23.00</h3>
+		                                </div>
+									</li>
+									<li>
+										<div class="pic">
+											<a href="#" target="_blank"><img src="products/p_17.jpg" /></a>
+										</div>
+										<div class="title">
+			                                <a href="#" target="_blank" class="name">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
+			                                <h3><b>￥</b>23.00</h3>
+		                                </div>
+									</li>
+									<li>
+										<div class="pic">
+											<a href="#" target="_blank"><img src="products/p_16.jpg" /></a>
+										</div>
+										<div class="title">
+			                                <a href="#" target="_blank" class="name">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
+			                                <h3><b>￥</b>23.00</h3>
+		                                </div>
+									</li>
+									<li>
+										<div class="pic">
+											<a href="#" target="_blank"><img src="products/p_19.jpg" /></a>
+										</div>
+										<div class="title">
+			                                <a href="#" target="_blank" class="name">乐事 无限薯片三连装（原味+番茄+烤肉）104g*3/组</a>
+			                                <h3><b>￥</b>23.00</h3>
+		                                </div>
+									</li>
+								</ul>
+								<a class="sNext" href="javascript:void(0)"></a>
+							</div><!-- slideBox End -->
+					
+						</div>
+						<!-- parBd End -->
+					</div>
+					<script type="text/javascript">
+						/* 内层图片无缝滚动 */
+						$(".slideGroup .slideBoxs").slide({ mainCell:"ul",vis:4,prevCell:".sPrev",nextCell:".sNext",effect:"leftMarquee",interTime:50,autoPlay:true,trigger:"click"});
+						/* 外层tab切换 */
+						$(".slideGroup").slide({titCell:".parHd li",mainCell:".parBd"});
+					</script>
+        			<!--广告-->
+        			<div class="Ads_style">
+        				<div class="ad"><a href="#"><img src="img/AD_03.png"></a></div>
+        				<div class="ad"><a href="#"><img src="img/AD_04.png"></a></div>
+        				<div class="ad"><a href="#"><img src="img/AD_06.png"></a></div>
+        			</div>
+				</div>
+			</div>
+ 			<!--板块栏目-->
+ 			<div class="clearfix Plate_style">
+  				<div class="Plate_column Plate_column_left">
+    				<div class="Plate_name">
+    					<h2>产品名称</h2>
+    					<div class="Sort_link">
+    						<a href="#" class="name">分类名称</a>
+    						<a href="#" class="name">分类名称</a>
+    						<a href="#" class="name">分类名称</a>
+    						<a href="#" class="name">分类名称</a>
+    						<a href="#" class="name">分类名称</a>
+    						<a href="#" class="name">分类名称</a>
+    						<a href="#" class="name">分类名称</a>
+    					</div>
+    					<a href="#" class="Plate_link"><img src="img/bk_img_14.png"></a>
+    				</div>
+    				<div class="Plate_product">
+    					<ul id="lists">
+    						<li class="product_display">
+					     		<a href="" class="Collect"><em></em>收藏</a>
+					     		<a href="#" class="img_link"><img src="products/p_44.jpg" width="140" height="140"></a>
+					     		<a href="#" class="name">墨西哥原装进口 科罗娜啤酒</a>
+					     		<h3><b>￥</b>34.00</h3>
+					    		<div class="Detailed">
+						   			<div class="content">
+							  			<p class="center"><a href="#" class="Buy_btn">立即购买</a></p>
+							  		</div>
+						   		</div>
+					     	</li>
+						    <li class="product_display">
+						    	<a href="" class="Collect"><em></em>收藏</a>
+						     	<a href="#" class="img_link"><img src="products/p_43.jpg" width="140" height="140"></a>
+						     	<a href="#" class="name">墨西哥原装进口 科罗娜啤酒</a>
+						     	<h3><b>￥</b>34.00</h3>
+						      	<div class="Detailed">
+							   		<div class="content">
+								  		<p class="center"><a href="#" class="Buy_btn">立即购买</a></p>
+								  	</div>
+							   	</div>
+						    </li>
+					     	<li class="product_display">
+					      		<a href="" class="Collect"><em></em>收藏</a>
+					     		<a href="#" class="img_link"><img src="products/p_41.jpg" width="140" height="140"></a>
+					     		<a href="#" class="name">墨西哥原装进口 科罗娜啤酒</a>
+					     		<h3><b>￥</b>34.00</h3>
+					       		<div class="Detailed">
+						   			<div class="content">
+							  			<p class="center"><a href="#" class="Buy_btn">立即购买</a></p>
+							  		</div>
+						   		</div>
+					     	</li>
+					     	<li class="product_display">
+					      		<a href="" class="Collect"><em></em>收藏</a>
+					     		<a href="#" class="img_link"><img src="products/p_42.jpg" width="140" height="140"></a>
+					     		<a href="#" class="name">墨西哥原装进口 科罗娜啤酒</a>
+					     		<h3><b>￥</b>34.00</h3>
+					     		<div class="Detailed">
+						   			<div class="content">
+							  			<p class="center"><a href="#" class="Buy_btn">立即购买</a></p>
+							  		</div>
+						   		</div>
+					     	</li>
+					    </ul>
+    				</div>
+  				</div>
+  				
+			    <div class="Plate_column Plate_column_right">
+			    	<div class="Plate_name">
+			    		<h2>产品名称</h2>
+			    		<div class="Sort_link">
+			    			<a href="#" class="name">分类名称</a>
+			    			<a href="#" class="name">分类名称</a>
+			    			<a href="#" class="name">分类名称</a>
+			    			<a href="#" class="name">分类名称</a>
+			    			<a href="#" class="name">分类名称</a>
+			    			<a href="#" class="name">分类名称</a>
+			    			<a href="#" class="name">分类名称</a>
+			    		</div>
+			    		<a href="#" class="Plate_link"> <img src="img/bk_img_19.png"></a>
+			    	</div>
+			    	<div class="Plate_product">
+			    		<ul id="lists">
+			     			<li class="product_display">
+			     				<a href="" class="Collect"><em></em>收藏</a>
+			     				<a href="#" class="img_link"><img src="products/p_15.jpg" width="140" height="140"></a>
+			     				<a href="#" class="name">墨西哥原装进口 科罗娜啤酒</a>
+			     				<h3><b>￥</b>34.00</h3>
+			    				<div class="Detailed">
+				   					<div class="content">
+					  					<p class="center"><a href="#" class="Buy_btn">立即购买</a></p>
+					  				</div>
+				   				</div>
+			     			</li>
+					     	<li class="product_display">
+					      		<a href="" class="Collect"><em></em>收藏</a>
+					     		<a href="#" class="img_link"><img src="products/p_13.jpg" width="140" height="140"></a>
+					     		<a href="#" class="name">墨西哥原装进口 科罗娜啤酒</a>
+					     		<h3><b>￥</b>34.00</h3>
+					      		<div class="Detailed">
+						   			<div class="content">
+							  			<p class="center"><a href="#" class="Buy_btn">立即购买</a></p>
+							  		</div>
+						   		</div>
+					     	</li>
+					     	<li class="product_display">
+					      		<a href="" class="Collect"><em></em>收藏</a>
+					     		<a href="#" class="img_link"><img src="products/p_12.jpg" width="140" height="140"></a>
+					     		<a href="#" class="name">墨西哥原装进口 科罗娜啤酒</a>
+					     		<h3><b>￥</b>34.00</h3>
+				       			<div class="Detailed">
+					   				<div class="content">
+						  				<p class="center"><a href="#" class="Buy_btn">立即购买</a></p>
+						  			</div>
+					   			</div>
+					     	</li>
+					     	<li class="product_display">
+					      		<a href="" class="Collect"><em></em>收藏</a>
+					     		<a href="#" class="img_link"><img src="products/p_11.jpg" width="140" height="140"></a>
+					     		<a href="#" class="name">墨西哥原装进口 科罗娜啤酒</a>
+					     		<h3><b>￥</b>34.00</h3>
+					     		<div class="Detailed">
+						   			<div class="content">
+							  			<p class="center"><a href="#" class="Buy_btn">立即购买</a></p>
+							  		</div>
+						   		</div>
+					     	</li>
+			    		</ul>
+			    	</div>
+			  	</div>
+			  	
+			   	<div class="Plate_column Plate_column_left">
+			    	<div class="Plate_name">
+			    		<h2>产品名称</h2>
+			    		<div class="Sort_link">
+				    		<a href="#" class="name">分类名称</a>
+				    		<a href="#" class="name">分类名称</a>
+				    		<a href="#" class="name">分类名称</a>
+				    		<a href="#" class="name">分类名称</a>
+				    		<a href="#" class="name">分类名称</a>
+				    		<a href="#" class="name">分类名称</a>
+				    		<a href="#" class="name">分类名称</a>
+			    		</div>
+			    		<a href="#" class="Plate_link"> <img src="img/bk_img_22.png"></a>
+			    	</div>
+			    	<div class="Plate_product">
+			    		<ul id="lists">
+			     			<li class="product_display">
+							    <a href="" class="Collect"><em></em>收藏</a>
+							    <a href="#" class="img_link"><img src="products/p_21.jpg" width="140" height="140"></a>
+							    <a href="#" class="name">墨西哥原装进口 科罗娜啤酒</a>
+			     				<h3><b>￥</b>34.00</h3>
+			    				<div class="Detailed">
+								   	<div class="content">
+								  		<p class="center"><a href="#" class="Buy_btn">立即购买</a></p>
+								  	</div>
+							   	</div>
+			     			</li>
+					     	<li class="product_display">
+					      		<a href="" class="Collect"><em></em>收藏</a>
+					     		<a href="#" class="img_link"><img src="products/p_25.jpg" width="140" height="140"></a>
+					     		<a href="#" class="name">墨西哥原装进口 科罗娜啤酒</a>
+				     			<h3><b>￥</b>34.00</h3>
+					      		<div class="Detailed">
+						   			<div class="content">
+							  			<p class="center"><a href="#" class="Buy_btn">立即购买</a></p>
+							  		</div>
+						   		</div>
+					     	</li>
+			     			<li class="product_display">
+			      				<a href="" class="Collect"><em></em>收藏</a>
+			     				<a href="#" class="img_link"><img src="products/p_22.jpg" width="140" height="140"></a>
+			     				<a href="#" class="name">墨西哥原装进口 科罗娜啤酒</a>
+			     				<h3><b>￥</b>34.00</h3>
+			       				<div class="Detailed">
+				   					<div class="content">
+					  					<p class="center"><a href="#" class="Buy_btn">立即购买</a></p>
+					  				</div>
+				   				</div>
+			     			</li>
+		     				<li class="product_display">
+			      				<a href="" class="Collect"><em></em>收藏</a>
+			     				<a href="#" class="img_link"><img src="products/p_24.jpg" width="140" height="140"></a>
+			     				<a href="#" class="name">墨西哥原装进口 科罗娜啤酒</a>
+			     				<h3><b>￥</b>34.00</h3>
+			     				<div class="Detailed">
+				   					<div class="content">
+					  					<p class="center"><a href="#" class="Buy_btn">立即购买</a></p>
+					  				</div>
+				   				</div>
+			     			</li>
+			    		</ul>
+			    	</div>
+			  	</div>
+
+			    <div class="Plate_column Plate_column_right">
+			    	<div class="Plate_name">
+			    		<h2>产品名称</h2>
+			    		<div class="Sort_link">
+			    			<a href="#" class="name">分类名称</a>
+			    			<a href="#" class="name">分类名称</a>
+			    			<a href="#" class="name">分类名称</a>
+			    			<a href="#" class="name">分类名称</a>
+			    			<a href="#" class="name">分类名称</a>
+			    			<a href="#" class="name">分类名称</a>
+			    			<a href="#" class="name">分类名称</a>
+			    		</div>
+			    		<a href="#" class="Plate_link"> <img src="img/bk_img_11.png"></a>
+			    	</div>
+			    	<div class="Plate_product">
+			    		<ul id="lists">
+			     			<li class="product_display">
+						    	<a href="" class="Collect"><em></em>收藏</a>
+						    	<a href="#" class="img_link"><img src="products/p_31.jpg" width="140" height="140"></a>
+						    	<a href="#" class="name">墨西哥原装进口 科罗娜啤酒</a>
+						    	<h3><b>￥</b>34.00</h3>
+			    				<div class="Detailed">
+				   					<div class="content">
+					  					<p class="center"><a href="#" class="Buy_btn">立即购买</a></p>
+					  				</div>
+				   				</div>
+			     			</li>
+					     	<li class="product_display">
+					      		<a href="" class="Collect"><em></em>收藏</a>
+					     		<a href="#" class="img_link"><img src="products/p_32.jpg" width="140" height="140"></a>
+					     		<a href="#" class="name">墨西哥原装进口 科罗娜啤酒</a>
+					     		<h3><b>￥</b>34.00</h3>
+					      		<div class="Detailed">
+						   			<div class="content">
+							  			<p class="center"><a href="#" class="Buy_btn">立即购买</a></p>
+							  		</div>
+						   		</div>
+					     	</li>
+					     	<li class="product_display">
+					      		<a href="" class="Collect"><em></em>收藏</a>
+					     		<a href="#" class="img_link"><img src="products/p_33.jpg" width="140" height="140"></a>
+					     		<a href="#" class="name">墨西哥原装进口 科罗娜啤酒</a>
+					     		<h3><b>￥</b>34.00</h3>
+					       		<div class="Detailed">
+						   			<div class="content">
+							  			<p class="center"><a href="#" class="Buy_btn">立即购买</a></p>
+							  		</div>
+						   		</div>
+					     	</li>
+					     	<li class="product_display">
+					      		<a href="" class="Collect"><em></em>收藏</a>
+					     		<a href="#" class="img_link"><img src="products/p_37.jpg" width="140" height="140"></a>
+					     		<a href="#" class="name">墨西哥原装进口 科罗娜啤酒 科罗娜啤酒</a>
+					     		<h3><b>￥</b>34.00</h3>
+					     		<div class="Detailed">
+						   			<div class="content">
+							  			<p class="center"><a href="#" class="Buy_btn">立即购买</a></p>
+							  		</div>
+						   		</div>
+					     	</li>
+			    		</ul>
+			    	</div>
+			    </div>
+ 			</div>
+ 			<!--友情链接-->
+ 			<div class="link_style clearfix">
+ 				<div class="title">友情链接</div>
+ 					<div class="link_name">
+				  		<a href="#"><img src="products/logo/34.jpg" width="100"></a>
+				  		<a href="#"><img src="products/logo/42.jpg" width="100"></a>
+				  		<a href="#"><img src="products/logo/152.jpg" width="100"></a>
+				  		<a href="#"><img src="products/logo/156.jpg" width="100"></a>
+				  		<a href="#"><img src="products/logo/199.jpg" width="100"></a>
+				  		<a href="#"><img src="products/logo/245.jpg" width="100"></a>
+				  		<a href="#"><img src="products/logo/339.jpg" width="100"></a>
+				  		<a href="#"><img src="products/logo/458.jpg" width="100"></a>
+				  		<a href="#"><img src="products/logo/618.jpg" width="100"></a>
+				  		<a href="#"><img src="products/logo/644.jpg" width="100"></a>
+				  		<a href="#"><img src="products/logo/690.jpg" width="100"></a>
+				  		<a href="#"><img src="products/logo/740.jpg" width="100"></a>
+				  		<a href="#"><img src="products/logo/741.png" width="100"></a>
+				  		<a href="#"><img src="products/logo/1089.jpg" width="100"></a>
+				  		<a href="#"><img src="products/logo/1145.jpg" width="100"></a>
+				  		<a href="#"><img src="products/logo/1208.jpg" width="100"></a>
+				  		<a href="#"><img src="products/logo/1252.jpg" width="100"></a>
+				  		<a href="#"><img src="products/logo/1270.jpg" width="100"></a>
+				  		<a href="#"><img src="products/logo/1309.jpg" width="100"></a>
+				  		<a href="#"><img src="products/logo/1396.jpg" width="100"></a>
+				  		<a href="#"><img src="products/logo/1663.jpg" width="100"></a>
+				  		<a href="#"><img src="products/logo/6116.jpg" width="100"></a>
+				  		<a href="#"><img src="products/logo/logo.jpg" width="100"></a>
+ 					</div>
+ 			</div>
+		</div>
+		<div class="fri-link-bg clearfix">
+    		<div class="fri-link">
+        		<div class="logo left margin-r20"><img src="img/fo-logo.jpg" width="152" height="81"></div>
+        		<div class="left"><img src="img/qd.jpg" width="90" height="90"><p>扫描下载APP</p></div>
+       			<div class="">
+					<dl>
+						<dt>新手上路</dt>
+					 	<dd><a href="#">售后流程</a></dd>
+				     	<dd><a href="#">购物流程</a></dd>
+				     	<dd><a href="#">订购方式</a> </dd>
+				     	<dd><a href="#">隐私声明 </a></dd>
+				     	<dd><a href="#">推荐分享说明 </a></dd>
+					</dl>
+					<dl>
+					 	<dt>配送与支付</dt>
+					 	<dd><a href="#">保险需求测试</a></dd>
+				     	<dd><a href="#">专题及活动</a></dd>
+				     	<dd><a href="#">挑选保险产品</a> </dd>
+				     	<dd><a href="#">常见问题 </a></dd>
+					</dl>
+					<dl>
+					 	<dt>售后保障</dt>
+					 	<dd><a href="#">保险需求测试</a></dd>
+				     	<dd><a href="#">专题及活动</a></dd>
+				     	<dd><a href="#">挑选保险产品</a> </dd>
+				     	<dd><a href="#">常见问题 </a></dd>
+					</dl>
+					<dl>
+					 	<dt>支付方式</dt>
+					 	<dd><a href="#">保险需求测试</a></dd>
+				     	<dd><a href="#">专题及活动</a></dd>
+				     	<dd><a href="#">挑选保险产品</a> </dd>
+				     	<dd><a href="#">常见问题 </a></dd>
+					</dl>	
+				    <dl>
+					 	<dt>帮助中心</dt>
+					 	<dd><a href="#">保险需求测试</a></dd>
+				     	<dd><a href="#">专题及活动</a></dd>
+				     	<dd><a href="#">挑选保险产品</a> </dd>
+				     	<dd><a href="#">常见问题 </a></dd>
+					</dl>
+				     	<dl>
+					 	<dt>帮助中心</dt>
+					 	<dd><a href="#">保险需求测试</a></dd>
+				     	<dd><a href="#">专题及活动</a></dd>
+				     	<dd><a href="#">挑选保险产品</a> </dd>
+				     	<dd><a href="#">常见问题 </a></dd>
+					</dl>
+			     	<dl>
+					 	<dt>帮助中心</dt>
+					 	<dd><a href="#">保险需求测试</a></dd>
+				     	<dd><a href="#">专题及活动</a></dd>
+				     	<dd><a href="#">挑选保险产品</a> </dd>
+				     	<dd><a href="#">常见问题 </a></dd>
+					</dl>	   
+   				</div>
+    		</div>
+		</div>
+		<div class="copyright">
+    		<div class="copyright-bg">
+        		<div class="hotline">为生活充电在线 <span>招商热线：****-********</span> 客服热线：400-******</div>
+        		<!--
+        			<div class="hotline co-ph">
+            		<p>版权所有Copyright ©***************</p>
+            		<p>*ICP备***************号 不良信息举报</p>
+            		<p>总机电话：****-*********/194/195/196 客服电话：4000****** 传 真：********
+                		<a href="http://www.mycodes.net/" target="_blank">源码之家</a>
+            		</p>
+        		</div>
+        		-->
+    		</div>
+		</div>
+	</body>
+</html>
